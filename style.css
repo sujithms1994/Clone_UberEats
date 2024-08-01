@@ -1,0 +1,548 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: arial;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+}
+body {
+    background: #FFFFFF;
+    color: #000000;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#banner{
+    background-image: url(https://www.ubereats.com/_static/c413f20400e04805.webp);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.site-nav{
+    display: flex;
+    justify-content: space-between;
+    width: 95.4%;
+    padding: 16px 24px 10px 42px;
+    align-items: center;
+    min-width: 1024px;
+}
+header{
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    position: fixed;
+    z-index: 1;
+}
+header.scrolled {
+    background-color:white;
+    box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.site-nav .navi{
+    display: flex;
+    gap: 12px;
+    padding-bottom: 5px;
+}
+.site-nav .navi a{
+    padding-left: 12px;
+}
+.site-nav .navi a img{
+    height: 16px;
+}
+.site-nav .buttons{
+    display: flex;
+    gap: 10px;
+}
+.site-nav button{
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+.site-nav .sign-up{
+    background-color: black;
+    color: white;
+    margin-left: 5px;
+}
+.site-nav .log-in{
+    background-color: white;
+}
+.site-nav .navi i{
+    font-size: 20px;
+}
+.site-nav .enter-loc-wrapper,.site-nav .enter-loc-wrapper2 {
+    display: none;
+    /* display: flex; */
+    align-self: flex-start;
+    flex: 1 1 auto;
+    height: 100%;
+    align-items: center;
+    margin-left: 20px;
+}
+ @keyframes ae {
+    0%{
+        max-width: 0%;
+        opacity: 0;
+    }
+    100%{
+        max-width: 100%;
+        opacity: 1;
+    }
+}
+/*
+@keyframes af {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+.site-nav .anime{
+    display: flex;
+    animation-fill-mode: forwards;
+    animation-duration: 400ms;
+    animation-name: ae;
+    flex: 0 1 auto;
+    overflow: hidden;
+}
+.site-nav .enter-loc{
+    display: flex;
+    /* animation-name: af; */
+    flex: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 400ms;
+}
+.site-nav .enter-loc-wrapper .content, .site-nav .enter-loc-wrapper2 .content{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-radius: 36px;
+    gap: 4px;
+    align-self: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    height: 36px;
+    transition: all 400ms ease;
+    line-height: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* .site-nav-anime{
+    transition: background-color 0.3s;
+    background-color: white;
+} */
+#site-nav-anime{
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    position: fixed;
+}
+#site-nav-anime.scrolled{
+    background-color: white;
+    /* transition: background-color 0.3s; */
+}
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    /* min-width: 1024px; */
+    max-width: 1920px;
+    /* padding: 17.5% 40px 82.5% 40px; */
+    position: absolute;
+    bottom: 40%;
+    left: 40px;
+    box-sizing: border-box;
+    width: 97%;
+    color: black;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+.banner-content form{
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+.banner-content h1{
+    font-size: 52px;
+    max-width: 60%;
+    white-space: nowrap;
+    margin-bottom: 40px;
+    line-height: 64px;
+    font-weight: 700;
+    font-family: UberMove, sans-serif;
+    margin: 0;
+    color: black;
+}
+.banner-content .input-container{
+    background-color: white;
+    padding: 18px;
+    /* width: 27%; */
+    width: 470px;
+    margin-right: 10px;
+    align-self: center;
+}
+.banner-content .input-container i{
+    font-size: 20px;
+    margin-right: 20px;
+}
+.banner-content input{
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border: none;
+    font-size: 16px;
+    font-weight: normal;
+}
+.banner-content .option-container{
+    background-color: white;
+    align-self: center;
+    padding: 6px 1px;
+    margin-right: 10px;
+}
+.banner-content .option-container select{
+    font-size: 16px;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 12px 2px;
+    border: none;
+    background-color: white;
+    /* width: 70%; */
+    font-weight: 500;
+}
+.banner-content .option-container i{
+    font-size: 20px;
+    padding: 12px 8px 12px 14px;
+}
+.banner-content form button{
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color:black;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 16px;
+    width: max-content;
+    font-size: 18px;
+    min-height: 56px;
+    height: 56px;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 24px;
+    box-sizing: border-box;
+    border: none;
+}
+.banner-content form button:hover{
+    background-color: #282828;
+}
+.banner-content span{
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+.banner-content span a{
+    color: black;
+}
+
+/* services */
+.services{
+    display: flex;
+    width: 100%;
+    flex: 1 1 0;
+    gap: 20px;
+    margin: 80px 10px 20px 0;
+}
+.services .card{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    text-decoration: none;
+}
+.services .card .image-container{
+    width: 100%;
+}
+.services .card .image-container img{
+    width: 100%;
+}
+.services .card h2{
+    font-family: UberMove, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    color: black;
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+.services .card h3{
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 8px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+}
+/* near-me */
+.countries-nearme-container{
+    margin: 0 40px;
+}
+.near-me, .countries{
+    min-width: 1024px;
+    max-width: 1920px;
+}
+.near-me .top-head, .countries .top-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.near-me .top-head h1, .countries .top-head h1{
+    font-family: UberMove, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    margin: 0;
+}
+.near-me .top-head h3, .countries .top-head h3{
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    text-decoration: underline;
+    color: black;
+    line-height: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.near-me .image-map{
+    margin: 24px 0;
+    width: 100%;
+    height: 360px;
+    min-width: 1024px;
+}
+.near-me .image-map img{
+    width: 100%;
+    height: 100%;
+}
+.space1{
+    height: 80px;
+}
+.space2{
+    height: 80px;
+}
+/* nearme-list1 */
+.nearme-list1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 24px;
+    grid-auto-flow: column;
+    margin-top: 24px;
+    min-width: 1024px;
+}
+.nearme-list1 div a, .countries-list div a{
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: inherit;
+}
+.nearme-list1 div a span, .countries-list div a span{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    cursor: pointer;
+    color: inherit;
+}
+
+/* countries-list */
+.countries-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,1fr);
+    gap: 24px;
+    grid-auto-flow: column;
+    margin-top: 24px;
+    min-width: 1024px;
+}
+
+/* footer */
+footer{
+    border-top: 1px solid #F3F3F3;
+    margin-top: 80px;
+    padding: 72px 0px 88px;
+    background-color: #FFFFFF;
+}
+footer .main-content{
+    max-width: 1280px;
+    padding: 0 40px;
+    min-width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+footer .main-content .section1{
+    display: flex;
+}
+footer .main-content .section1 .icons{
+    display: flex;
+    flex: 2;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+footer .main-content .section1 .icons .uber-eats{
+    margin-bottom: 64px;
+    height: 24px;
+    width: auto;
+    filter: unset;
+    aspect-ratio: auto 146/24;
+}
+footer .main-content .section1 .icons .store-play{
+    display: flex;
+    gap: 16px;
+    flex-flow: row wrap;
+}
+footer .main-content .section1 .icons .store-play a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+footer .main-content .section1 .icons .store-play a img{
+    width: auto;
+}
+footer .main-content .section1 .list1{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+footer .main-content .section1 .list1 ul, footer .main-content .section1 .list2 ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+footer .main-content .section1 .list1 ul li, footer .main-content .section1 .list2 ul li{
+    display: block;
+}
+footer .main-content .section1 .list1 ul li a, footer .main-content .section1 .list2 ul li a{
+    display: flex;
+    margin-bottom: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer .main-content .section1 ul li a.last-child{
+    margin-bottom: 0;
+}
+footer .main-content .section1 .list2{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+footer .main-content .section1 .list2 .spacer_8{
+    width: 8px;
+}
+footer .section1 .list2 .svg-english svg{
+    width: 18px;
+    height: 16px;
+}
+.main-content .line{
+    background-color: #F3F3F3;
+    margin: 40px 0;
+    border: none;
+    height: 1px;
+}
+footer .main-content .section2{
+    display: flex;
+}
+footer .main-content .section2 .social-wrapper{
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    color: black;
+}
+footer .main-content .section2 .social-wrapper .social{
+    display: flex;
+}
+footer .main-content .section2 .social-wrapper .social a{
+    text-decoration: none;
+    color: inherit;
+}
+footer .main-content .section2 .social-wrapper .social a span{
+    margin: -1px;
+    white-space: nowrap;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+}
+footer .main-content .section2 .social-wrapper .social a svg{
+    fill: currentColor;
+    width: 16px;
+    flex: none;
+    height: 16px;
+}
+.spacer_24{
+    width: 24px;
+}
+footer .section2 .social svg{
+    width: 18px;
+    height: 16px;
+}
+footer .section2 .h1{
+    flex: 1 0 36px;
+}
+footer .section2 .privacy-wrapper{
+    display: flex;
+}
+footer .section2 .privacy-wrapper .privacy{
+    display: flex;
+}
+footer .section2 .privacy-wrapper .privacy a{
+    display: flex;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    font-weight: normal;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+.spacer_40{
+    width: 40px;
+}
+footer .main-content .section3{
+    display: flex;
+}
+footer .main-content .section3 .h1{
+    flex: 1 0 36px;
+}
+footer .main-content .section3 .footer-low-wrapper{
+    display: flex;
+}
+footer .main-content .section3 .footer-low-wrapper .footer-low{
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black;
+}
+footer .main-content .section3 .footer-low-wrapper .footer-low a{
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+}
+footer .main-content .section3 .footer-low-wrapper .copyright{
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: normal;
+    color: black;    
+}
+
+/* Media Queries */
+
+@media screen and (max-width:1000px){
+    .site-nav .enter-loc-wrapper{
+        display: flex;
+    }
+}
